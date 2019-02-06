@@ -1,1 +1,68 @@
 /* Add here all your CSS customizations */
+/*
+* Thumb Info
+*/
+.custom-thumb-info-style-1 {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+					flex-direction: column;
+	overflow: visible;
+	height: 100%;
+}
+.custom-thumb-info-style-1 .thumb-info-wrapper {
+    position: relative;
+	margin: 0 !important;
+}
+.custom-thumb-info-style-1 .thumb-info-wrapper .thumb-info-price {
+	position: absolute;
+	top: 13px;
+	left: 0;
+	background: #CCC;
+	padding: 9.6px 27.2px;
+	padding: 0.6rem 1.7rem;
+	color: #FFF;
+	border-radius: 0 50px 50px 0;
+	-webkit-transform: translate3d(-10px, 0, 0);
+					transform: translate3d(-10px, 0, 0);
+	-webkit-transition: ease transform 300ms;
+	transition: ease transform 300ms;
+}
+.custom-thumb-info-style-1 .thumb-info-caption {
+	/*padding: 38.4px 33.6px;*/
+	padding: 1.5rem 1.8rem;
+}
+.custom-thumb-info-style-1 .thumb-info-caption > h3 {
+	font-size: 17.6px;
+	font-size: 1.1rem;
+	margin-bottom: 0;
+}
+.custom-thumb-info-style-1 .thumb-info-caption > p {
+	padding: 0;
+	font-size: 13.6px;
+	font-size: 0.85rem;
+	line-height: 2;
+	color: #1e1e1e;
+}
+.custom-thumb-info-style-1 .thumb-info-footer {
+	border-top: 1px solid #e9e9e9;
+	padding: 8px 33.6px;
+	padding: 0.5rem 2.1rem;
+	margin-top: auto;
+}
+.custom-thumb-info-style-1 .thumb-info-footer .nav > li > a {
+	color: #515658;
+	-webkit-transition: ease color 300ms;
+	transition: ease color 300ms;
+}
+.custom-thumb-info-style-1 .thumb-info-footer .nav > li > a:hover {
+	color: #CCC;
+	text-decoration: none;
+}
+.custom-thumb-info-style-1:hover .thumb-info-wrapper .thumb-info-price {
+	-webkit-transform: translate3d(0, 0, 0);
+					transform: translate3d(0, 0, 0);
+}
