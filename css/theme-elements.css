@@ -2265,9 +2265,15 @@ html.ie9 .call-to-action.button-centered .container > .row > [class*="col-"], ht
 	padding: 2rem;
 }
 
+.card-text-color-light {
+	color: #FFF !important;
+}
+
 .card-text-color-hover-light:hover * {
 	color: #FFF !important;
 }
+
+
 
 .card-background-image-hover {
 	background-size: cover;
