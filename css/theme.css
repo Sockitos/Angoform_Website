@@ -65,7 +65,7 @@ li {
 }
 
 #header .header-body.header-body-bottom-border-fixed {
-	border-bottom: 1px solid rgba(234, 234, 234, 0.5) !important;
+	border-bottom: 1px solid rgba(234, 234, 234, 0.1) !important;
 }
 
 #header .header-body[class*="border-color-"] {
