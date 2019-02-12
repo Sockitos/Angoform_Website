@@ -53,6 +53,14 @@
 
 	</head>
 	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
 		<div class="body">
 			<header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
@@ -62,7 +70,7 @@
 							<div class="header-column">
 								<div class="header-row">
 									<div class="header-logo">
-										<a href="../">
+										<a href=".">
 											<img alt="Porto" width="213" height="26" data-sticky-width="213" data-sticky-height="26" src="img/logo-default-slim-dark.png">
 										</a>
 									</div>
@@ -75,12 +83,12 @@
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="dropdown">
-														<a class="dropdown-item" href="../">
+														<a class="dropdown-item" href=".">
 															Início
 														</a>
 													</li>
 													<li class="dropdown">
-														<a class="dropdown-item" href="../">
+														<a class="dropdown-item" href="sobre-nos.html">
 															Sobre nós
 														</a>
 													</li>
@@ -147,7 +155,7 @@
 							</div>
 							<div class="col-md-12 align-self-center order-1">
 								<ul class="breadcrumb breadcrumb-light d-block text-center">
-									<li><a href="../">Início</a></li>
+									<li><a href=".">Início</a></li>
 									<li class="active">Notícias</li>
 								</ul>
 							</div>
@@ -310,203 +318,6 @@
 									</div>
 								</article>
 								
-								<article class="post post-large">
-									<div class="post-image">
-										<div class="owl-carousel owl-theme show-nav-hover dots-inside nav-inside nav-style-1 nav-light" data-plugin-options="{'items': 1, 'margin': 10, 'loop': false, 'nav': true, 'dots': true}">
-											<div>
-												<div class="img-thumbnail border-0 p-0 d-block">
-													<img class="img-fluid border-radius-0" src="img/blog/wide/blog-24.jpg" alt="">
-												</div>
-											</div>
-											<div>
-												<div class="img-thumbnail border-0 p-0 d-block">
-													<img class="img-fluid border-radius-0" src="img/blog/wide/blog-20.jpg" alt="">
-												</div>
-											</div>
-											<div>
-												<div class="img-thumbnail border-0 p-0 d-block">
-													<img class="img-fluid border-radius-0" src="img/blog/wide/blog-21.jpg" alt="">
-												</div>
-											</div>
-										</div>
-									</div>
-								
-									<div class="post-date">
-										<span class="day">9</span>
-										<span class="month">Jan</span>
-									</div>
-								
-									<div class="post-content">
-								
-										<h2 class="font-weight-semibold text-6 line-height-3 mb-3"><a href="noticias/autarquias-em-2020.html">This is a stardard slider gallery post</a></h2>
-										<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. [...]</p>
-								
-										<div class="post-meta">
-											<span><i class="far fa-user"></i> By <a href="#">John Doe</a> </span>
-											<span><i class="far fa-folder"></i> <a href="#">Duis</a>, <a href="#">News</a> </span>
-											<span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span>
-											<span class="d-block d-sm-inline-block float-sm-right mt-3 mt-sm-0"><a href="noticias/autarquias-em-2020.html" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
-										</div>
-								
-									</div>
-								</article>
-								
-								<article class="post post-large">
-									<div class="post-image">
-										<div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
-											<div class="row mx-0">
-												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-13.jpg">
-														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
-															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-13.jpg" class="img-fluid" alt="" />
-																<span class="thumb-info-action">
-																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</div>
-												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-16.jpg">
-														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
-															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-16.jpg" class="img-fluid" alt="" />
-																<span class="thumb-info-action">
-																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</div>
-												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-20.jpg">
-														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
-															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-20.jpg" class="img-fluid" alt="" />
-																<span class="thumb-info-action">
-																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</div>
-												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-23.jpg">
-														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
-															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-23.jpg" class="img-fluid" alt="" />
-																<span class="thumb-info-action">
-																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</div>
-												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-29.jpg">
-														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
-															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-29.jpg" class="img-fluid" alt="" />
-																<span class="thumb-info-action">
-																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</div>
-												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-40.jpg">
-														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
-															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-40.jpg" class="img-fluid" alt="" />
-																<span class="thumb-info-action">
-																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								
-									<div class="post-date">
-										<span class="day">8</span>
-										<span class="month">Jan</span>
-									</div>
-								
-									<div class="post-content">
-								
-										<h2 class="font-weight-semibold text-6 line-height-3 mb-3"><a href="noticias/autarquias-em-2020.html">This is a standard image gallery thumbs post</a></h2>
-										<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. [...]</p>
-								
-										<div class="post-meta">
-											<span><i class="far fa-user"></i> By <a href="#">John Doe</a> </span>
-											<span><i class="far fa-folder"></i> <a href="#">Duis</a>, <a href="#">News</a> </span>
-											<span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span>
-											<span class="d-block d-sm-inline-block float-sm-right mt-3 mt-sm-0"><a href="noticias/autarquias-em-2020.html" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
-										</div>
-								
-									</div>
-								</article>
-								
-								<article class="post post-large">
-									<div class="post-image">
-										<div class="embed-responsive embed-responsive-16by9">
-											<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/45830194?color=ffffff&title=0&byline=0&portrait=0&badge=0" width="640" height="360" allowfullscreen></iframe>
-										</div>
-									</div>
-								
-									<div class="post-date">
-										<span class="day">7</span>
-										<span class="month">Jan</span>
-									</div>
-								
-									<div class="post-content">
-								
-										<h2 class="font-weight-semibold text-6 line-height-3 mb-3"><a href="noticias/autarquias-em-2020.html">This is a standard embedded video post</a></h2>
-										<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. [...]</p>
-								
-										<div class="post-meta">
-											<span><i class="far fa-user"></i> By <a href="#">John Doe</a> </span>
-											<span><i class="far fa-folder"></i> <a href="#">Duis</a>, <a href="#">News</a> </span>
-											<span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span>
-											<span class="d-block d-sm-inline-block float-sm-right mt-3 mt-sm-0"><a href="noticias/autarquias-em-2020.html" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
-										</div>
-								
-									</div>
-								</article>
-								
-								<article class="post post-large">
-									<div class="post-image">
-										<div class="embed-responsive embed-responsive-16by9">
-											<video class="embed-responsive-item" autoplay="" muted="" loop="" controls="">
-												<source src="video/memory-of-a-woman.mp4" type="video/mp4">
-											</video>
-										</div>
-									</div>
-								
-									<div class="post-date">
-										<span class="day">6</span>
-										<span class="month">Jan</span>
-									</div>
-								
-									<div class="post-content">
-								
-										<h2 class="font-weight-semibold text-6 line-height-3 mb-3"><a href="noticias/autarquias-em-2020.html">This is a standard HTML5 video post</a></h2>
-										<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. [...]</p>
-								
-										<div class="post-meta">
-											<span><i class="far fa-user"></i> By <a href="#">John Doe</a> </span>
-											<span><i class="far fa-folder"></i> <a href="#">Duis</a>, <a href="#">News</a> </span>
-											<span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span>
-											<span class="d-block d-sm-inline-block float-sm-right mt-3 mt-sm-0"><a href="noticias/autarquias-em-2020.html" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
-										</div>
-								
-									</div>
-								</article>
-								
 								<ul class="pagination float-right">
 									<li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
 									<li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -623,6 +434,7 @@
 		<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 		<script src="vendor/vide/jquery.vide.min.js"></script>
 		<script src="vendor/vivus/vivus.min.js"></script>
+		<script src="/vendor/instafeed/instafeed.min.js"></script>
 		
 		<!-- Theme Base, Components and Settings -->
 		<script src="js/theme.js"></script>
@@ -632,6 +444,9 @@
 		
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
+
+		<!-- Examples -->
+		<script src="js/examples/examples.instafeed.js"></script>
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script>
