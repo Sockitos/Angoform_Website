@@ -249,8 +249,8 @@
 																										
 										<div class="form-row ml-0 mt-3">
 											<label class="font-weight-bold text-dark">Tipo de Formação</label>
-											<div class="form-group col d-inline-flex">
-												<input type="radio" name="tipoFormacao" id="tipoIndividual" style="visibility: hidden">
+											<div class="form-group col d-inline-flex pl-3">
+												<input type="radio" name="tipoFormacao" id="tipoIndividual" style="visibility: hidden" checked>
 												<label class="btn btn-primary btn-modern" id="l1" for="tipoIndividual">Individual</label>
 
 												<input type="radio" name="tipoFormacao" id="tipoColetivo" style="visibility: hidden">
@@ -258,10 +258,28 @@
 
 											</div>
 
-											<div class="form-group col d-flex align-items-center">
-												<div class="btn btn-primary btn-modern ml-auto mb-0 " onclick="next_form()">Próximo</div>
-											</div>
+											
 										</div>
+
+										<div class="form-row ml-0 mt-3">
+												<label class="font-weight-bold text-dark">Programa Visão 360</label>
+												<div class="form-group col-lg-4 col-sm-12 d-flex flex-column pl-3">
+													<input type="radio" name="programa" id="empresario" style="visibility: hidden" checked>
+													<label class="btn btn-primary btn-modern" id="l3" for="empresario">Empresários Individuais<br> e Empreendedores</label>
+	
+													<input type="radio" name="programa" id="intra" style="visibility: hidden">
+													<label class="btn btn-light btn-modern" id="l4" for="intra">Soluções<br> Intra-empresas</label>
+
+													
+													<input type="radio" name="programa" id="internacional" style="visibility: hidden">
+													<label class="btn btn-light btn-modern" id="l5" for="internacional">Internacionalização<br> Empresarial</label>
+	
+												</div>
+	
+												<div class="form-group col d-flex align-items-end">
+													<div class="btn btn-primary btn-modern ml-auto mb-0 " onclick="next_form()">Próximo</div>
+												</div>
+											</div>
 										
 									</div>
 
@@ -311,9 +329,7 @@
 													</div>
 												</div>					
 												
-											</div>
 
-											<div class="row w-100" >	
 												<div class="colmd-6 col">
 													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
 														<div class="card-body">
@@ -355,8 +371,6 @@
 													</div>
 												</div>					
 												
-											</div>
-											<div class="row w-100" >	
 												<div class="colmd-6 col">
 													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
 														<div class="card-body">
@@ -398,8 +412,6 @@
 													</div>
 												</div>					
 												
-											</div>
-											<div class="row w-100" >	
 												<div class="colmd-6 col">
 													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
 														<div class="card-body">
@@ -441,8 +453,6 @@
 													</div>
 												</div>					
 												
-											</div>
-											<div class="row w-100" >	
 												<div class="colmd-6 col">
 													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
 														<div class="card-body">
@@ -484,8 +494,6 @@
 													</div>
 												</div>					
 												
-											</div>
-											<div class="row w-100" >	
 												<div class="colmd-6 col">
 													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
 														<div class="card-body">
@@ -527,8 +535,6 @@
 													</div>
 												</div>					
 												
-											</div>
-											<div class="row w-100" >	
 												<div class="colmd-6 col">
 													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
 														<div class="card-body">
@@ -570,8 +576,6 @@
 													</div>
 												</div>					
 												
-											</div>
-											<div class="row w-100" >	
 												<div class="colmd-6 col">
 													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
 														<div class="card-body">
@@ -750,6 +754,37 @@
 		
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
+		<script>
+				var checkedProgramLabel = "l3";
+
+				function next_form(){
+					$("#personalData").fadeOut("slow", "linear", function(){$("#formCursos").fadeIn("slow");});		
+				}
+
+				$('#contactForm input[type=radio][name=tipoFormacao]').change(function() {
+					$("#l1").toggleClass("btn-light");
+					$("#l1").toggleClass("btn-primary");
+					$("#l2").toggleClass("btn-light");
+					$("#l2").toggleClass("btn-primary");
+				});
+
+				$('#contactForm input[type=radio][name=programa]').change(function() {
+					var label = $("label[for='" + $(this).attr('id') + "']").attr('id');					
+					$("#" + label).toggleClass("btn-light");
+					$("#" + label).toggleClass("btn-primary");
+					$("#" + checkedProgramLabel).toggleClass("btn-light");
+					$("#" + checkedProgramLabel).toggleClass("btn-primary");
+					checkedProgramLabel = label;				
+				});
+
+				$(".card").click(function(){
+					$(this).toggleClass("bg-color-primary");
+					$(this).toggleClass("bg-color-light");
+					$(this).children().children().toggleClass("text-white");
+					
+					//keep array of selected cards
+				});
+		</script>
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script>
