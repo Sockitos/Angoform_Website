@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>Visão 360 | </title>	
+		<title>Visão 360 | Angoform</title>	
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
@@ -137,7 +137,7 @@
 			</header>
 
 			<div role="main" class="main">
-				<section class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-7" style="background-image: url(img/page-header/page-header-about-us.jpg);">
+				<section class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-7" style="background-image: url(img/page-header/page-header.jpg); background-position: center center;">
 					<div class="container">
 						<div class="row mt-5">
 							<div class="col-md-12 align-self-center p-static order-2 text-center">
@@ -158,9 +158,8 @@
 					<div class="row py-4">
 						<div class="col-lg-12 mt-5">
 							<div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
-								<h4 class="my-3">Não achou o seu curso? Nós ajudamos.</h4>
-								<p class="text-justify">Monte o seu curso, escolhendo um dos programas que mais vai ao encontro das suas necessidades académicas, pessoais e profissionais. </p>
-								<h4>Os Programas Visão 360º são:</h4>
+								<h2 class="font-weight-semibold mb-4">Monte o seu curso, escolhendo um dos programas que mais vai ao encontro das suas necessidades académicas, pessoais e profissionais. </h2>
+								<p class="text-color-dark text-6 line-height-5 mb-2">Os Programas Visão 360º são:</p>
 							</div>
 							<div class="row ">
 								<div class="col-lg-4">
@@ -191,7 +190,7 @@
 
 							
 							<div class="appear-animation my-3" data-appear-animation="fadeIn" data-appear-animation-delay="800">
-								<p class="text-justify">Pode escolher 10 disciplinas / temas de qualquer um dos cursos do programa Visão 360 das mais diversas áreas e estudar durante o tempo que achar necessário. Com formação presencial, formação e coaching especializado, online por professores conceituados, com linguagem fácil e óptimos recursos visuais. Estude o que realmente precisa de aprender!</p>
+								<p class="text-justify line-height-9 text-4 pr-lg-5 mr-lg-5 mb-4">Pode escolher 10 disciplinas / temas de qualquer um dos cursos do programa Visão 360 das mais diversas áreas e estudar durante o tempo que achar necessário. Com formação presencial, formação e coaching especializado, online por professores conceituados, com linguagem fácil e óptimos recursos visuais. Estude o que realmente precisa de aprender!</p>
 							</div>
 						</div>
 
@@ -217,20 +216,19 @@
 										</div>
 										
 										<div class="form-row ">
-											<div class="form-group col-lg-6">
+											<div class="form-group col-lg-12">
 												<label class="required font-weight-bold text-dark">Nome Completo</label>
 												<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
-											</div>
-											<div class="form-group col-lg-6">
-												<label class="required font-weight-bold text-dark">Telefone</label>
-												<input type="text" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
 											</div>
 										</div>
 										<div class="form-row ">
 											<div class="form-group col-lg-6 ">
 												<label class="required font-weight-bold text-dark">Endereço Email</label>
 												<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
-												<p class="text-1 mb-0">(exemplo@dominio)</p>
+											</div>
+											<div class="form-group col-lg-6">
+												<label class="required font-weight-bold text-dark">Telefone</label>
+												<input type="text" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
 											</div>
 											
 										</div>
@@ -244,42 +242,37 @@
 												<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
 											</div>
 										</div>
-
-
 																										
 										<div class="form-row ml-0 mt-3">
-											<label class="font-weight-bold text-dark">Tipo de Formação</label>
-											<div class="form-group col d-inline-flex pl-3">
-												<input type="radio" name="tipoFormacao" id="tipoIndividual" style="visibility: hidden" checked>
+											<label class="font-weight-bold text-dark" style="width: 10rem;">Tipo de Formação</label>
+											<div class="form-group col d-inline-flex">
 												<label class="btn btn-primary btn-modern" id="l1" for="tipoIndividual">Individual</label>
+												<input type="radio" name="tipoFormacao" id="tipoIndividual" style="visibility: hidden" checked>
 
-												<input type="radio" name="tipoFormacao" id="tipoColetivo" style="visibility: hidden">
 												<label class="btn btn-light btn-modern" id="l2" for="tipoColetivo">Coletivo</label>
-
+												<input type="radio" name="tipoFormacao" id="tipoColetivo" style="visibility: hidden">
 											</div>
-
-											
 										</div>
 
 										<div class="form-row ml-0 mt-3">
-												<label class="font-weight-bold text-dark">Programa Visão 360</label>
-												<div class="form-group col-lg-4 col-sm-12 d-flex flex-column pl-3">
-													<input type="radio" name="programa" id="empresario" style="visibility: hidden" checked>
-													<label class="btn btn-primary btn-modern" id="l3" for="empresario">Empresários Individuais<br> e Empreendedores</label>
-	
-													<input type="radio" name="programa" id="intra" style="visibility: hidden">
-													<label class="btn btn-light btn-modern" id="l4" for="intra">Soluções<br> Intra-empresas</label>
+											<label class="font-weight-bold text-dark" style="width: 10rem;">Programa Visão 360</label>
+											<div class="form-group col-lg-4 col-sm-12 d-flex flex-column">
+												<label class="btn btn-primary btn-modern" id="l3" for="empresario">Empresários Individuais<br> e Empreendedores</label>
+												<input type="radio" name="programa" id="empresario" style="visibility: hidden" checked>
 
-													
-													<input type="radio" name="programa" id="internacional" style="visibility: hidden">
-													<label class="btn btn-light btn-modern" id="l5" for="internacional">Internacionalização<br> Empresarial</label>
-	
-												</div>
-	
-												<div class="form-group col d-flex align-items-end">
-													<div class="btn btn-primary btn-modern ml-auto mb-0 " onclick="next_form()">Próximo</div>
-												</div>
+												<label class="btn btn-light btn-modern" id="l4" for="intra">Soluções<br> Intra-empresas</label>
+												<input type="radio" name="programa" id="intra" style="visibility: hidden">
+												
+												<label class="btn btn-light btn-modern" id="l5" for="internacional">Internacionalização<br> Empresarial</label>
+												<input type="radio" name="programa" id="internacional" style="visibility: hidden">
 											</div>
+
+											<div class="form-group col d-flex align-items-end">
+												<div class="btn btn-primary btn-modern ml-auto mb-0 " onclick="next_form()">Próximo</div>
+											</div>
+										</div>
+
+			
 										
 									</div>
 
