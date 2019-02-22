@@ -63,7 +63,7 @@
 								<div class="header-row">
 									<div class="header-logo">
 										<a href=".">
-											<img alt="Porto" width="213" height="26" data-sticky-width="213" data-sticky-height="26" src="img/logo-default-slim-dark.png">
+											<img alt="Angoform" width="213" height="26" data-sticky-width="213" data-sticky-height="26" src="img/logo-default.png">
 										</a>
 									</div>
 								</div>
@@ -1163,11 +1163,11 @@
 						<span>Mantenha-se em Contacto</span>
 					</div>
 					<div class="row py-5 my-4">
-						<div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+						<div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
 							<h5 class="text-3 mb-3">NEWSLETTER</h5>
 							<p class="pr-1">Mantenha-se atualizado com todas as nossas novidades. Subscreva a nossa newsletter!</p>
 							<div class="alert alert-success d-none" id="newsletterSuccess">
-								<strong>Success!</strong> You've been added to our email list.
+								<strong>Successo!</strong> Foi adicionado à nossa lista de emails.
 							</div>
 							<div class="alert alert-danger d-none" id="newsletterError"></div>
 							<form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST" class="mr-4 mb-3 mb-md-0">
@@ -1179,31 +1179,12 @@
 								</div>
 							</form>
 						</div>
-						<div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-							<h5 class="text-3 mb-3">Notícias recentes</h5>
-							<ul class="list-unstyled mb-0">
-								<li class="media mb-3 pb-1">
-									<a href="#">
-										<img class="mr-3 rounded-circle" src="img/office/our-office-4-square.jpg" alt="" style="max-width: 70px;">
-									</a>
-									<div class="media-body">
-										<a href="#">
-											<p class="text-3 text-color-light opacity-8 mb-1">Lorem ipsum dolor sit, consectetur adipiscing elit.</p>
-											<p class="text-2 mb-0">12:53 AM Dec 19th</p>
-										</a>
-									</div>
-								</li>
-								<li class="media">
-									<a href="#">
-										<img class="mr-3 rounded-circle" src="img/office/our-office-5-square.jpg" alt="" style="max-width: 70px;">
-									</a>
-									<div class="media-body">
-										<a href="#">
-											<p class="text-3 text-color-light opacity-8 mb-1">Lorem ipsum dolor sit, consectetur adipiscing elit.</p>
-											<p class="text-2 mb-0">12:53 AM Dec 19th</p>
-										</a>
-									</div>
-								</li>
+						<div class="col-md-6 col-lg-2 mb-4 mb-lg-0">
+							<h5 class="text-3 mb-3">Páginas</h5>
+							<ul class="list list-icons list-icons-sm">
+								<li><i class="fas fa-angle-right"></i><a href="noticias.html" class="link-hover-style-1 ml-1"> Notícias</a></li>
+								<li><i class="fas fa-angle-right"></i><a href="sobre-nos.html" class="link-hover-style-1 ml-1"> Sobre Nós</a></li>
+								<li><i class="fas fa-angle-right"></i><a href="contactos.html" class="link-hover-style-1 ml-1"> Contactos</a></li>
 							</ul>
 						</div>
 						<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
@@ -1213,17 +1194,17 @@
 									<p class="m-0">Avenida 21 de Janeiro. Casa nº 47</p>
 									<p class="m-0">Talona, Município de Belas</p>
 								</li>
-								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:mail@example.com">seminarios.ao@angoform.com</a></p></li>
+								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:geral@angoform.com">geral@angoform.com</a></p></li>
 							</ul>
 						</div>
 						<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
 							<h5 class="text-3 mb-3">Escritórios Lisboa, Portugal</h5>
 							<ul class="list list-icons list-icons-lg">
 								<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i>
-									<p class="m-0">Rua D. Pedro de Mascarenhas 137</p>
-									<p class="m-0">2785 -592 Cascais</p>
+									<p class="m-0">Avenida do Ultra Mar nº8 5ºEsq</p>
+									<p class="m-0">2700-826 Amadora</p>
 								</li>
-								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:mail@example.com">seminarios.pt@angoform.com</a></p></li>
+								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:formacao@angoform.com">formacao@angoform.com</a></p></li>
 							</ul>
 						</div>
 					</div>
@@ -1271,60 +1252,7 @@
 		<script src="js/theme.init.js"></script>
 
 		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-		<script>
-
-			/*
-			Map Settings
-
-				Find the Latitude and Longitude of your address:
-					- https://www.latlong.net/
-					- http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
-
-			*/
-
-			// Map Markers
-			var mapMarkers = [{
-				address: "New York, NY 10017",
-				html: "<strong>New York Office</strong><br>New York, NY 10017",
-				icon: {
-					image: "img/pin.png",
-					iconsize: [26, 46],
-					iconanchor: [12, 46]
-				},
-				popup: true
-			}];
-
-			// Map Initial Location
-			var initLatitude = 40.75198;
-			var initLongitude = -73.96978;
-
-			// Map Extended Settings
-			var mapSettings = {
-				controls: {
-					draggable: (($.browser.mobile) ? false : true),
-					panControl: true,
-					zoomControl: true,
-					mapTypeControl: true,
-					scaleControl: true,
-					streetViewControl: true,
-					overviewMapControl: true
-				},
-				scrollwheel: false,
-				markers: mapMarkers,
-				latitude: initLatitude,
-				longitude: initLongitude,
-				zoom: 11
-			};
-
-			var map = $('#googlemaps').gMap(mapSettings);
-
-			// Map text-center At
-			var mapCenterAt = function(options, e) {
-				e.preventDefault();
-				$('#googlemaps').gMap("centerAt", options);
-			}
-
-		</script>
+		
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script>
