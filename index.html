@@ -894,7 +894,7 @@
 					</div>
 				</div>		
 
-				<section class="section border-0 m-0 appear-animation" data-appear-animation="fadeIn"">
+				<section class="section border-0 m-0 appear-animation" data-appear-animation="fadeIn">
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-md-6 p-5">
@@ -913,7 +913,17 @@
 										</div>
 										<div class="form-row">
 											<div class="form-group col">
-												<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="newsletterEmail" id="newsletterEmail" placeholder="Email..." required>
+												<input type="text" value="" data-msg-required="Por favor insira a empresa." maxlength="100" class="form-control" name="newsletterEmpresa" id="newsletterEmpresa" placeholder="Empresa..." required>
+											</div>
+										</div>
+										<div class="form-row">
+											<div class="form-group col">
+												<input type="text" value="" data-msg-required="Por favor insira a função." maxlength="100" class="form-control" name="newsletterFuncao" id="newsletterFuncao" placeholder="Função..." required>
+											</div>
+										</div>
+										<div class="form-row">
+											<div class="form-group col">
+												<input type="text" value="" data-msg-required="Por favor insira a função." maxlength="100" class="form-control" name="newsletterEmail" id="newsletterEmail" placeholder="Email..." required>
 											</div>
 										</div>
 										<div class="form-row">
@@ -931,11 +941,11 @@
 									<p class="text-3 mb-4">Sinta-se à vontade para pedir detalhes, não guarde dúvidas!</p>
 									<form id="contactForm" class="contact-form form-style-2 pr-xl-5" action="php/contact-form.php" method="POST">
 										<div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
-											<strong>Success!</strong> Your message has been sent to us.
+											<strong>Successo!</strong> A sua mensagem foi enviada.
 										</div>
 				
 										<div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
-											<strong>Error!</strong> There was an error sending your message.
+											<strong>Erro!</strong> Ocorreu um erro ao tentar enviar a sua mensagem.
 											<span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
 										</div>
 										
