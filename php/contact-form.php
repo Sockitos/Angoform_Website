@@ -72,7 +72,9 @@ try {
 
 	// From - Name
 	$fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'Website User';
-	$mail->SetFrom($email, $fromName,0);
+	//$mail->SetFrom($email, $fromName);
+	$mail->SetFrom('darth@empire.com', $fromName);
+
 
 	// Repply To
 	if( isset($_POST['email']) ) {
@@ -82,7 +84,9 @@ try {
 	$mail->IsHTML(true);                                       // Set email format to HTML
 
 	$mail->CharSet = 'UTF-8';
-
+	echo '<script>console.log('.json_encode($subject).')</script>';
+	echo '<script>console.log('.json_encode($message).')</script>';
+	
 	$mail->Subject = $subject;
 	$mail->Body    = $message;
 
