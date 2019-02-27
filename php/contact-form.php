@@ -18,7 +18,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'php-mailer/src/PHPMailer.php';
 require 'php-mailer/src/SMTP.php';
 require 'php-mailer/src/Exception.php';
-
+/*
 // Step 1 - Enter your email address below.
 $email = 'zemtep@gmail.com';
 
@@ -28,7 +28,7 @@ $debug = 2;
 // If contact form don't has the subject input change the value of subject here
 $subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'Define subject in php/contact-form.php line 29';
 
-$message = 'This is a message';
+$message = '';
 
 foreach($_POST as $label => $value) {
 	$label = ucwords($label);
@@ -46,12 +46,12 @@ foreach($_POST as $label => $value) {
 	}
 
 	$message .= $label.": " . htmlspecialchars($value, ENT_QUOTES) . "<br>\n";
-}
+}*/
 
 $mail = new PHPMailer(true);
 
 try {
-
+/*
 	$mail->SMTPDebug = $debug;                                 // Debug Mode
 
 	// Step 2 (Optional) - If you don't receive the email, try to configure the parameters below:
@@ -88,13 +88,37 @@ try {
 	echo '<script>console.log('.json_encode($fromName).')</script>';
 	echo '<script>console.log('.json_encode($subject).')</script>';
 	echo '<script>console.log('.json_encode($message).')</script>';
-	echo 'all: <script>console.log('.json_encode($mail).')</script>';
 	
 	$mail->Subject = $subject;
 	$mail->Body    = $message;
 
+	echo 'nice: <script>console.log('.json_encode($mail).')</script>';
+
 	$mail->Send();
-	$arrResult = array ('response'=>'success');
+	$arrResult = array ('response'=>'success');*/
+
+	/* Set the mail sender. */
+	$mail->setFrom('darth@empire.com', 'Darth Vader');
+
+	/* Add a recipient. */
+	$mail->addAddress('zemtep@gmail.com', 'Emperor');
+
+	/* Set the subject. */
+	$mail->Subject = 'Force';
+
+	/* Set the mail message body. */
+	$mail->Body = 'There is a great disturbance in the Force.';
+
+	echo 'nice: <script>console.log('.json_encode($mail).')</script>';
+
+
+	/* Finally send the mail. */
+	if (!$mail->send())
+	{
+	/* PHPMailer error. */
+	echo $mail->ErrorInfo;
+	}
+
 
 } catch (Exception $e) {
 	$arrResult = array ('response'=>'error','errorMessage'=>$e->errorMessage());
