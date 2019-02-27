@@ -49,7 +49,7 @@ foreach($_POST as $label => $value) {
 }*/
 
 $mail = new PHPMailer(true);
-
+/*
 try {
 /*
 	$mail->SMTPDebug = $debug;                                 // Debug Mode
@@ -97,6 +97,8 @@ try {
 	$mail->Send();
 	$arrResult = array ('response'=>'success');*/
 
+	$mail->IsMAIL();
+
 	/* Set the mail sender. */
 	$mail->setFrom('darth@empire.com', 'Darth Vader');
 
@@ -119,7 +121,7 @@ try {
 	echo $mail->ErrorInfo;
 	}
 
-
+/*
 } catch (Exception $e) {
 	$arrResult = array ('response'=>'error','errorMessage'=>$e->errorMessage());
 } catch (\Exception $e) {
@@ -128,4 +130,4 @@ try {
 
 if ($debug == 0) {
 	echo json_encode($arrResult);
-}
+}*/
