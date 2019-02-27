@@ -23,7 +23,7 @@ require 'php-mailer/src/Exception.php';
 $email = 'zemtep@gmail.com';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
-$debug = 0;
+$debug = 2;
 
 // If contact form don't has the subject input change the value of subject here
 $subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'Define subject in php/contact-form.php line 29';
@@ -72,7 +72,7 @@ try {
 
 	// From - Name
 	$fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'Website User';
-	$mail->SetFrom($email, $fromName);
+	$mail->SetFrom($email, $fromName,0);
 
 	// Repply To
 	if( isset($_POST['email']) ) {
