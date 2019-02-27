@@ -28,7 +28,7 @@ $debug = 2;
 // If contact form don't has the subject input change the value of subject here
 $subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'Define subject in php/contact-form.php line 29';
 
-$message = '';
+$message = 'This is a message';
 
 foreach($_POST as $label => $value) {
 	$label = ucwords($label);
@@ -84,8 +84,11 @@ try {
 	$mail->IsHTML(true);                                       // Set email format to HTML
 
 	$mail->CharSet = 'UTF-8';
+	echo '<script>console.log('.json_encode($email).')</script>';
+	echo '<script>console.log('.json_encode($fromName).')</script>';
 	echo '<script>console.log('.json_encode($subject).')</script>';
 	echo '<script>console.log('.json_encode($message).')</script>';
+	echo 'all: <script>console.log('.json_encode($mail).')</script>';
 	
 	$mail->Subject = $subject;
 	$mail->Body    = $message;
