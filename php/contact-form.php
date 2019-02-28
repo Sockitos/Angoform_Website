@@ -21,14 +21,13 @@ require 'php-mailer/src/Exception.php';
 
 
 // Step 1 - Enter your email address below.
-$email = 'sockitos@angoform.com';
+$email = 'zemtep@gmail.com';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
 $debug = 0;
 
 // If contact form don't has the subject input change the value of subject here
-$subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'Define subject in php/contact-form.php line 29';
-
+$subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'O utilizador nao incluiu um assunto.';
 $message = '';
 
 
@@ -37,9 +36,25 @@ foreach($_POST as $label => $value) {
 
 	// Use the commented code below to change label texts. On this example will change "Email" to "Email Address"
 
-	// if( $label == 'Email' ) {               
-	// 	$label = 'Email Address';              
-	// }
+	if( $label == 'Name' ) {               
+		$label = 'Nome';
+		$fromName = $value;               
+	}
+
+	if( $label == 'Subject' ) {               
+		$label = 'Assunto';
+		$subject = $value;              
+	}
+
+	if( $label == 'Message' ) {               
+		$label = 'Mensagem';
+		$message_text = $value;               
+	}
+
+	if( $label == 'Email' ) {               
+		$label = 'Email';
+		$email_m = $value;               
+    }
 
 	// Checkboxes
 	if( is_array($value) ) {
@@ -47,40 +62,51 @@ foreach($_POST as $label => $value) {
 		$value = implode(', ', $value);
 	}
 
-	$message .= $label.": " . htmlspecialchars($value, ENT_QUOTES) . "<br>\n";
+	//$message .= "<b>" . $label.":</b> " . htmlspecialchars($value, ENT_QUOTES) . "<br>\n";
 }
+
+//Create html body for email
+$message_h = '';
+
+$message_h .= file_get_contents('templates/contact-us.htm');
+
+$message_h .= htmlspecialchars($message_text, ENT_QUOTES);
+
+$message_h .= file_get_contents('templates/contact-us_2.htm');
+
+
+
+
+
+
 
 $mail = new PHPMailer(true);
 
 try {
-
 	$mail->SMTPDebug = $debug;                                 // Debug Mode
-	$usuario = 'sockitos@angoform.com'; 
-	$senha = 'TesteAngoform123'; 
-
+	
 	// Step 2 (Optional) - If you don't receive the email, try to configure the parameters below:
 
 	$mail->IsSMTP();                                         // Set mailer to use SMTP
 	$mail->Host = 'angoform.com';   // Specify main and backup server
 	$mail->SMTPAuth = true;                                  // Enable SMTP authentication
-	$mail->Username = $usuario;                	    // SMTP username
-	$mail->Password = $senha;                             	 // SMTP password
+	$mail->Username = 'sockitos@angoform.com';                	    // SMTP username
+	$mail->Password = 'TesteAngoform123';                             	 // SMTP password
 	//$mail->SMTPSecure = 'tls';                               	// Enable encryption, 'ssl' also accepted
 	$mail->Port = 587;   								       // TCP port to connect to
 
 	$mail->AddAddress($email);	 						       // Add another recipient
 
-	//$mail->AddAddress('person2@domain.com', 'Person 2');     // Add a secondary recipient
-	//$mail->AddCC('person3@domain.com', 'Person 3');          // Add a "Cc" address. 
-	//$mail->AddBCC('person4@domain.com', 'Person 4');         // Add a "Bcc" address. 
+	
 
 	// From - Name
-	$fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'Website User';
-	$mail->SetFrom($email, $fromName);
+	$fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'O utilizador nao incluiu o nome.';
+	//$mail->SetFrom($email, $fromName);
 
-	// Repply To
 	if( isset($_POST['email']) ) {
-		$mail->AddReplyTo($_POST['email'], $fromName);
+		//$mail->AddReplyTo($_POST['email'], $fromName);
+		$mail->SetFrom($_POST['email'], $fromName);
+
 	}
 
 	$mail->IsHTML(true);                                       // Set email format to HTML
@@ -88,7 +114,9 @@ try {
 	$mail->CharSet = 'UTF-8';
 
 	$mail->Subject = $subject;
-	$mail->Body    = $message;
+	$mail->msgHTML($message_h, __DIR__);
+
+	//$mail->Body    = $message;
 
 	$mail->Send();
 	$arrResult = array ('response'=>'success');
