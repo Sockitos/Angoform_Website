@@ -342,7 +342,7 @@
 								<p class="mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Verifique toda a informação e deixo-nos uma mensagem com quaisquer dúvidas!</p>
 							</div>
 
-							<form id="contactForm" class="contact-form appear-animation" action="php/contact-form.php" method="POST" data-appear-animation="fadeIn" data-appear-animation-delay="600">
+							<form id="contactForm" class="contact-form appear-animation" action="../php/inscricao-form.php" method="POST" data-appear-animation="fadeIn" data-appear-animation-delay="600">
 								<div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
 									<strong>Success!</strong> Your message has been sent to us.
 								</div>
@@ -365,17 +365,17 @@
 									</div>
 									<div class="form-group col-lg-6">
 										<label class="required font-weight-bold text-dark">Telefone</label>
-										<input type="tel" value="" data-msg-required="Please enter your phone number." data-msg-tel="Please enter a valid phone number." maxlength="100" class="form-control" name="email" id="email" required>
+										<input type="tel" value="" data-msg-required="Please enter your phone number." data-msg-tel="Please enter a valid phone number." maxlength="100" class="form-control" name="telefone" id="telefone" required>
 									</div>
 								</div>
 								<div class="form-row">
 									<div class="form-group col-lg-6">
 										<label class="required font-weight-bold text-dark">Função</label>
-										<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
+										<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="funcao" id="funcao" required>
 									</div>
 									<div class="form-group col-lg-6">
 										<label class="required font-weight-bold text-dark">Empresa</label>
-										<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
+										<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="empresa" id="empresa" required>
 									</div>
 								</div>
 								<div class="form-row">
@@ -386,6 +386,7 @@
 								</div>
 								<div class="form-row">
 									<div class="form-group col">
+										<input type="text" value="Formacao1" maxlength="100" class="form-control" name="empresa" id="empresa" style="visibility: hidden; position: absolute;" >
 										<input type="submit" value="Enviar Inscrição" class="btn btn-primary btn-modern" data-loading-text="Enviando...">
 									</div>
 								</div>
