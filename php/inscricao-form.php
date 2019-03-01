@@ -4,7 +4,7 @@ Name: 			Contact Form
 Written by: 	Okler Themes - (http://www.okler.net)
 Theme Version:	7.1.0
 */
-
+/*
 namespace PortoContactForm;
 
 session_cache_limiter('nocache');
@@ -43,7 +43,6 @@ $message_h = file_get_contents('templates/inscricao_form.html');
 $placeholders = array("$1", "$2", "$3", "$4", "$5", "$6", "$7");
 $values   = array($fromName, $fromEmail, $telefone, $funcao, $empresa, $message_text, $curso);
 $message = str_replace($placeholders, $values, $message_h);
-echo '<script>console.log('.json_encode($message).')</script>';
 
 $mail = new PHPMailer(true);
 try {
@@ -81,4 +80,4 @@ try {
 
 if ($debug == 0) {
 	echo json_encode($arrResult);
-}
+}*/

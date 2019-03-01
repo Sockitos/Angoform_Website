@@ -4,7 +4,7 @@ Name: 			Contact Form
 Written by: 	Okler Themes - (http://www.okler.net)
 Theme Version:	7.1.0
 */
-
+/*
 namespace PortoContactForm;
 
 session_cache_limiter('nocache');
@@ -120,3 +120,5 @@ try {
 if ($debug == 0) {
 	echo json_encode($arrResult);
 }
+
+*/
