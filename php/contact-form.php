@@ -21,7 +21,7 @@ require 'php-mailer/src/Exception.php';
 
 
 // Step 1 - Enter your email address below.
-$email = 'sockitos@angoform.com';
+$email = 'zemtep@gmail.com';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
 $debug = 0;
@@ -66,36 +66,25 @@ foreach($_POST as $label => $value) {
 }
 
 //Create html body for email
-$message_h = '';
-
-$message_h .= file_get_contents('templates/contact-us.htm');
-
-$message_h .= htmlspecialchars($message_text, ENT_QUOTES);
-
-$message_h .= file_get_contents('templates/contact-us_2.htm');
-
-
-
-
-
+$message_h = file_get_contents('templates/contact_form.html');
+$message = str_replace("$", $message_text, $message_h);
 
 
 $mail = new PHPMailer(true);
-
 try {
 	$mail->SMTPDebug = $debug;                                 // Debug Mode
 	
 	// Step 2 (Optional) - If you don't receive the email, try to configure the parameters below:
 
 	$mail->IsSMTP();                                         // Set mailer to use SMTP
-	$mail->Host = 'angoform.com';   // Specify main and backup server
+	$mail->Host = 'angoform.com';                            // Specify main and backup server
 	$mail->SMTPAuth = true;                                  // Enable SMTP authentication
-	$mail->Username = 'sockitos@angoform.com';                	    // SMTP username
-	$mail->Password = 'TesteAngoform123';                             	 // SMTP password
-	//$mail->SMTPSecure = 'tls';                               	// Enable encryption, 'ssl' also accepted
-	$mail->Port = 587;   								       // TCP port to connect to
+	$mail->Username = 'socks@angoform.com';                  // SMTP username
+	$mail->Password = 'TesteAngoform123';                    // SMTP password
+	//$mail->SMTPSecure = 'tls';                             // Enable encryption, 'ssl' also accepted
+	$mail->Port = 587;   								                     // TCP port to connect to
 
-	$mail->AddAddress($email);	 						       // Add another recipient
+	$mail->AddAddress($email);	 						                 // Add another recipient
 
 	
 
@@ -114,7 +103,7 @@ try {
 	$mail->CharSet = 'UTF-8';
 
 	$mail->Subject = $subject;
-	$mail->msgHTML($message_h, __DIR__);
+	$mail->msgHTML($message, __DIR__);
 
 	//$mail->Body    = $message;
 
