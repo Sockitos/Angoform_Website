@@ -21,10 +21,10 @@ require 'php-mailer/src/Exception.php';
 
 
 // Set email to send message to --temporary
-$email = 'zemtep@gmail.com';
+$email = 'josempinto@edu.ulisboa.pt';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
-$debug = 0;
+$debug = 2;
 
 // Set variables of form
 $fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'O utilizador nao incluiu um Nome.';
@@ -48,8 +48,10 @@ switch ($curso) {
 
 // Inser form fields in email
 $message_h = file_get_contents('templates/inscricao_form.html');
-$message = str_replace("$", $message_text, $message_h);
 
+$placeholders = array("$1", "$2", "$3", "$4", "$5");
+$values   = array($fromName, $fromEmail, $telefone, $funcao, $empresa);
+$message = str_replace($placeholders, $values, $message_h);
 echo '<script>console.log('.json_encode($message).')</script>';
 
 $mail = new PHPMailer(true);
