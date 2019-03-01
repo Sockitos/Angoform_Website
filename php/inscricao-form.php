@@ -24,7 +24,7 @@ require 'php-mailer/src/Exception.php';
 $email = 'zemtep@gmail.com';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
-$debug = 2;
+$debug = 0;
 
 // Set variables of form
 $fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'O utilizador nao incluiu um Nome.';
