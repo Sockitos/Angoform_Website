@@ -20,60 +20,37 @@ require 'php-mailer/src/SMTP.php';
 require 'php-mailer/src/Exception.php';
 
 
-// Step 1 - Enter your email address below.
+// Set email to send message to --temporary
 $email = 'zemtep@gmail.com';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
 $debug = 0;
 
-// If contact form don't has the subject input change the value of subject here
-$email_m = ( isset($_POST['email']) ) ? $_POST['email'] : 'NA';
-$telefone = ( isset($_POST['telefone']) ) ? $_POST['telefone'] : 'NA';
-$funcao = ( isset($_POST['funcao']) ) ? $_POST['funcao'] : 'NA';
-$empresa = ( isset($_POST['empresa']) ) ? $_POST['empresa'] : 'NA';
-$message_text = ( isset($_POST['message']) ) ? $_POST['message'] : 'NA';
+// Set variables of form
+$fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'O utilizador nao incluiu um Nome.';
+$fromEmail = ( isset($_POST['email']) ) ? $_POST['email'] : 'O utilizador nao incluiu um Email.';
+$telefone = ( isset($_POST['telefone']) ) ? $_POST['telefone'] : 'O utilizador nao incluiu um Telefone.';
+$funcao = ( isset($_POST['funcao']) ) ? $_POST['funcao'] : 'O utilizador nao incluiu um Função.';
+$empresa = ( isset($_POST['empresa']) ) ? $_POST['empresa'] : 'O utilizador nao incluiu um Empresa.';
+$message_text = ( isset($_POST['message']) ) ? $_POST['message'] : 'O utilizador nao incluiu um Mensagem.';
+$curso = $_POST['curso'];
 
 
+// Set target email
+switch ($curso) {
+	case 'cacontabilidade':
+		$target_email = 'formacao.autarquica@angoform.com';
+		break;
 
-foreach($_POST as $label => $value) {
-	$label = ucwords($label);
+	default:
+		$target_email = 'formacao@angoform.com';
+}
 
-	// Use the commented code below to change label texts. On this example will change "Email" to "Email Address"
-/*
-	if( $label == 'Name' ) {               
-		$label = 'Nome';
-		$fromName = $value;               
-	}
+// Inser form fields in email
+$message_h = file_get_contents('templates/inscricao_form.html');
+$message = str_replace("$", $message_text, $message_h);
 
-	if( $label == 'Subject' ) {               
-		$label = 'Assunto';
-		$subject = $value;              
-	}
-
-	if( $label == 'Message' ) {               
-		$label = 'Mensagem';
-		$message_text = $value;               
-	}
-
-	if( $label == 'Email' ) {               
-		$label = 'Email';
-		$email_m = $value;               
-    }
-
-	// Checkboxes
-	if( is_array($value) ) {
-		// Store new value
-		$value = implode(', ', $value);
-	}
-
-	//$message .= "<b>" . $label.":</b> " . htmlspecialchars($value, ENT_QUOTES) . "<br>\n";
-}*/
-
-$text = $name . $email_m . $telefone . $funcao . $empresa . $message_text;
-//Create html body for email
-$message_h = file_get_contents('templates/contact_form.html');
-$message = str_replace("$", $text, $message_h);
-
+echo '<script>console.log('.json_encode($message).')</script>';
 
 $mail = new PHPMailer(true);
 try {
@@ -90,24 +67,12 @@ try {
 	$mail->Port = 587;   								                     // TCP port to connect to
 
 	$mail->AddAddress($email);	 						                 // Add another recipient
+	$mail->SetFrom($fromEmail, $fromName);
 
-	
-
-	// From - Name
-	$fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'O utilizador nao incluiu o nome.';
-	//$mail->SetFrom($email, $fromName);
-
-	if( isset($_POST['email']) ) {
-		//$mail->AddReplyTo($_POST['email'], $fromName);
-		$mail->SetFrom($_POST['email'], $fromName);
-
-	}
-
-	$mail->IsHTML(true);                                       // Set email format to HTML
-
+	$mail->IsHTML(true);                                     // Set email format to HTML
 	$mail->CharSet = 'UTF-8';
 
-	$mail->Subject = $subject;
+	$mail->Subject = 'Pedido de inscrição';
 	$mail->msgHTML($message, __DIR__);
 
 	//$mail->Body    = $message;
