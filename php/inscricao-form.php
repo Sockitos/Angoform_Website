@@ -21,7 +21,7 @@ require 'php-mailer/src/Exception.php';
 
 
 // Set email to send message to --temporary
-$email = 'josempinto@edu.ulisboa.pt';
+$email = 'zemtep@gmail.com';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
 $debug = 2;
@@ -34,17 +34,8 @@ $funcao = ( isset($_POST['funcao']) ) ? $_POST['funcao'] : 'O utilizador nao inc
 $empresa = ( isset($_POST['empresa']) ) ? $_POST['empresa'] : 'O utilizador nao incluiu um Empresa.';
 $message_text = ( isset($_POST['message']) ) ? $_POST['message'] : 'O utilizador nao incluiu um Mensagem.';
 $curso = $_POST['curso'];
+$target_email = $_POST['angomail'];
 
-
-// Set target email
-switch ($curso) {
-	case 'cacontabilidade':
-		$target_email = 'formacao.autarquica@angoform.com';
-		break;
-
-	default:
-		$target_email = 'formacao@angoform.com';
-}
 
 // Inser form fields in email
 $message_h = file_get_contents('templates/inscricao_form.html');
