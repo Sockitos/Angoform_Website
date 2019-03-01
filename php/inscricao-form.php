@@ -40,8 +40,8 @@ $target_email = $_POST['angomail'];
 // Inser form fields in email
 $message_h = file_get_contents('templates/inscricao_form.html');
 
-$placeholders = array("$1", "$2", "$3", "$4", "$5");
-$values   = array($fromName, $fromEmail, $telefone, $funcao, $empresa);
+$placeholders = array("$1", "$2", "$3", "$4", "$5", "$6", "$7");
+$values   = array($fromName, $fromEmail, $telefone, $funcao, $empresa, $message_text, $curso);
 $message = str_replace($placeholders, $values, $message_h);
 echo '<script>console.log('.json_encode($message).')</script>';
 
