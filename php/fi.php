@@ -34,23 +34,23 @@ if(!empty($_POST['email2'])){
 foreach($_POST as $label => $value) {
 	$label = ucwords($label);
 
-	if( $label == 'name' ) {               
+	if( $label == 'Name' ) {               
 		$label = 'Nome';
 		$fromName = htmlspecialchars($value, ENT_QUOTES);               
 	}
 
-	if( $label == 'telefone' ) {               
+	if( $label == 'Telefone' ) {               
 		$label = 'Telefone';
 		$telefone = htmlspecialchars($value, ENT_QUOTES);              
 	}
 
-	if( $label == 'empresa' ) {               
+	if( $label == 'Empresa' ) {               
 		$label = 'Empresa';
 		$empresa = htmlspecialchars($value, ENT_QUOTES);               
 	}
 
-	if( $label == 'funcao' ) {               
-		$label = 'Funcao';
+	if( $label == 'Funcao' ) {               
+		$label = 'Função';
 		$funcao = htmlspecialchars($value, ENT_QUOTES);               
 	}
 
@@ -64,12 +64,12 @@ foreach($_POST as $label => $value) {
 		$email_m = htmlspecialchars($value, ENT_QUOTES);               
 	}
 	
-	if( $label == 'angomail' ) {               
+	if( $label == 'Angomail' ) {               
 		$label = 'AngoMail';
 		$target_email = htmlspecialchars($value, ENT_QUOTES);               
 	}
 	
-	if( $label == 'curso' ) {               
+	if( $label == 'Curso' ) {               
 		$label = 'Curso';
 		$curso = htmlspecialchars($value, ENT_QUOTES);               
     }
