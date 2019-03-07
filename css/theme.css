@@ -47,6 +47,10 @@ li {
 	z-index: 1030;
 }
 
+#email2{
+	display: none;
+}
+
 #header .header-body {
 	display: -webkit-box;
 	display: -ms-flexbox;
