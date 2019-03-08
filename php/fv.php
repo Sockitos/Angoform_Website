@@ -59,8 +59,8 @@ foreach($_POST as $label => $value) {
 	if( $label == "TipoFormacao" && is_array($value) ) {
 		// Store new value
 		//$value = implode(', ', $value);
-		echo 'console.log(' . json_encode( $value ) . ');';
-	}
+		echo '<script>console.log('.json_encode($value).')</script>';
+		}
 
 	//$message .= "<b>" . $label.":</b> " . htmlspecialchars($value, ENT_QUOTES) . "<br>\n";
 }
