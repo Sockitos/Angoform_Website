@@ -214,42 +214,43 @@
 								</div>
 
 								
-								<form id="contactForm" class="contact-form appear-animation" action="" method="POST" data-appear-animation="fadeIn" data-appear-animation-delay="600">
+								<form id="contactForm" class="contact-form appear-animation" action="php/fv.php" method="POST" data-appear-animation="fadeIn" data-appear-animation-delay="600">
 									<div id="personalData" class="active-form">
 										<div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
-											<strong>Success!</strong> Your message has been sent to us.
+											<strong>Sucesso!</strong> O seu pedido foi enviado.
 										</div>
 	
 										<div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
-											<strong>Error!</strong> There was an error sending your message.
+											<strong>Erro!</strong> Ocorreu um erro ao enviar o seu pedido.
 											<span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
 										</div>
 										
 										<div class="form-row ">
 											<div class="form-group col-lg-12">
 												<label class="required font-weight-bold text-dark">Nome Completo</label>
-												<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
+												<input type="text" value="" data-msg-required="Por favor insira o seu nome." maxlength="100" class="form-control" name="name" id="name" required>
 											</div>
 										</div>
 										<div class="form-row ">
 											<div class="form-group col-lg-6 ">
 												<label class="required font-weight-bold text-dark">Endereço Email</label>
-												<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
+												<input type="email" value="" data-msg-required="Por favor insira o seu email." maxlength="100" class="form-control" name="email" id="email" required>
+												<input type="email" maxlength="100" class="form-control" name="email2" id="email2" >
 											</div>
 											<div class="form-group col-lg-6">
 												<label class="required font-weight-bold text-dark">Telefone</label>
-												<input type="text" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
+												<input type="tel" value="" data-msg-required="Por favor insira o seu telefone." maxlength="15" class="form-control" name="telefone" id="telefone" required>
 											</div>
 											
 										</div>
 										<div class="form-row">
 											<div class="form-group col-lg-6">
 												<label class="required font-weight-bold text-dark">Empresa</label>
-												<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
+												<input type="text" value="" data-msg-required="Por favor insira a sua empresa." maxlength="100" class="form-control" name="empresa" id="empresa" required>
 											</div>
 											<div class="form-group col-lg-6">
 												<label class="required font-weight-bold text-dark">Função</label>
-												<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
+												<input type="text" value="" data-msg-required="Por favor insisra a sua função." maxlength="100" class="form-control" name="funcao" id="funcao" required>
 											</div>
 										</div>
 																										
@@ -278,7 +279,7 @@
 											</div>
 
 											<div class="form-group col d-flex align-items-end">
-												<div class="btn btn-primary btn-modern ml-auto mb-0 " onclick="next_form()">Próximo</div>
+												<div class="btn btn-primary btn-modern ml-auto mb-0 " id="proximo" onclick="next_form()">Próximo</div>
 											</div>
 										</div>
 
@@ -287,347 +288,17 @@
 									</div>
 
 
-									<div id="formCursos" class="inactive-form appear-animation" action="" method="POST" data-appear-animation="fadeIn" data-appear-animation-delay="600">
+									<div id="formCursos" class="inactive-form appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="600">
 										<label class="font-weight-bold text-dark">Escolha 10 disciplinas / temas:</label>
 										<div class="form-row ">
-											<div class="row w-100" >	
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">01</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">02</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">03</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">04</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">05</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>					
+											<div class="row w-100" id="disciplinas">												
 												
-
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">06</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">07</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">08</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">09</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">10</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>					
-												
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">11</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">12</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">13</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">14</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">15</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>					
-												
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">16</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">17</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">18</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">19</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">20</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>					
-												
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">21</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">22</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">23</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">24</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">25</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>					
-												
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">26</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">27</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">28</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">29</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">30</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>					
-												
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">31</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">32</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">33</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">34</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">35</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>					
-												
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">36</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">37</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">38</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">39</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>
-												<div class="colmd-6 col">
-													<div class="card my-2 bg-color-light card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover">
-														<div class="card-body">
-															<h4 class="card-title mb-1 text-4 font-weight-bold transition-2ms">40</h4>
-															<p class="card-text transition-2ms">Disciplina</p>
-														</div>
-													</div>
-												</div>					
-												
-											</div>																		
-
-
+											</div>
 										</div>
 																										
 										<div class="form-row justify-content-end mt-3">
 											<div class="form-group ">
-												<input type="submit" value="Confirmar" class="btn btn-primary btn-modern" data-loading-text="Enviando...">
+												<input type="submit" value="Confirmar" class="btn btn-primary btn-modern" data-loading-text="Enviando..." onclick="prev_form()">
 											</div>
 										</div>
 										
@@ -745,6 +416,10 @@
 					$("#personalData").fadeOut("slow", "linear", function(){$("#formCursos").fadeIn("slow");});		
 				}
 
+				function prev_form(){
+					$("#formCursos").fadeOut("slow", "linear", function(){$("#personalData").fadeIn("slow");});		
+				}
+
 				$('#contactForm input[type=radio][name=tipoFormacao]').change(function() {
 					$("#l1").toggleClass("btn-light");
 					$("#l1").toggleClass("btn-primary");
@@ -761,13 +436,86 @@
 					checkedProgramLabel = label;				
 				});
 
-				$(".card").click(function(){
-					$(this).toggleClass("bg-color-primary");
-					$(this).toggleClass("bg-color-light");
-					$(this).children().children().toggleClass("text-white");
-					
-					//keep array of selected cards
-				});
+				//load courses
+				var courses = new Array();
+				var selected = new Array();
+				$.get('visao_disciplinas.txt', function(data){
+						courses = data.split('\n');
+						$.each(courses, function( index, value ) {
+							i = index + 1;
+							var d1 = document.createElement("div");
+							d1.className = "col-lg-4 col-md-6 col-sm-12 ";
+
+							var d2 = document.createElement("div");
+							d2.className = "card my-2 bg-color-light border card-text-color-hover-light border-0 bg-color-hover-primary transition-2ms box-shadow-1 box-shadow-1-primary box-shadow-1-hover";
+							d2.style.height = 'calc(100% - 16px)';
+
+							var d3 = document.createElement("div");
+							d3.className = "card-body ";
+
+							
+
+
+							var h = document.createElement("h4");
+							h.className = "card-title mb-1 text-4 font-weight-bold transition-2ms";
+							h.innerHTML = i;
+
+							if(i < 10){
+								h.innerHTML = '0' + i;
+							}
+
+							var p1 = document.createElement("p");
+							p1.className = "card-text transition-2ms";
+							p1.innerHTML = value;
+
+							$(d3).append(h);
+							$(d3).append(p1);
+							$(d2).append(d3);
+
+							var input = $('<input/>')
+								.addClass('invisible')
+								.attr('type', 'checkbox')
+								.attr('name','course_checkbox[]')
+								.attr('value', value)
+								.appendTo(d2);
+
+							$(d1).append(d2);
+
+							$("#disciplinas").append(d1);
+
+						});
+
+						$(".card").click(function(){
+							//keep array of selected cards
+							var t = $(this).children().children(".card-text").text();
+							var idx = $.inArray(t, selected);
+							if (idx == -1) {
+								if(selected.length < 10){
+									selected.push(t);
+									$(this).children('input[name="course_checkbox[]"]').prop('checked', true);
+									console.log($(this).children('input[name="course_checkbox[]"]').is(":checked"));
+								}
+								else {
+									return;
+								}
+							} else {
+								selected.splice(idx, 1);
+								$(this).children('input[name="course_checkbox[]"]').prop('checked', false);
+								console.log($(this).children('input[name="course_checkbox[]"]').is(":checked"));
+							}
+
+							$(this).toggleClass("bg-color-primary");
+							$(this).toggleClass("bg-color-light");
+							$(this).children().children().toggleClass("text-white");
+							
+							
+
+						});
+
+					});					
+
+
+				
 		</script>
 
 	</body>
