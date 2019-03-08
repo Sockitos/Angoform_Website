@@ -56,11 +56,12 @@ foreach($_POST as $label => $value) {
 	}
 
 	// Checkboxes
-	if(  is_array($value) ) {
+	if( is_array($value) ) {
 		// Store new value
-		$value = implode(', ', $value);
-		echo '<script>console.log('.json_encode($value).')</script>';
+		foreach($value as $j){
+			echo '<script>console.log('.json_encode($j).')</script>';
 		}
+	}
 
 	//$message .= "<b>" . $label.":</b> " . htmlspecialchars($value, ENT_QUOTES) . "<br>\n";
 }
