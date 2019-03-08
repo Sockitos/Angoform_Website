@@ -56,7 +56,7 @@ foreach($_POST as $label => $value) {
 	}
 
 	// Checkboxes
-	if( $label == "TipoFormacao" && is_array($value) ) {
+	if(  is_array($value) ) {
 		// Store new value
 		//$value = implode(', ', $value);
 		echo '<script>console.log('.json_encode($value).')</script>';
