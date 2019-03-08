@@ -912,14 +912,17 @@
 									<h2 class="font-weight-bold line-height-1 mb-2">Newsletter</h2>
 									<p class="text-3 mb-4">Mantenha-se atualizado com todas as nossas novidades!</p>
 									<form id="newsletterForm" action="php/fn.php" method="POST" class="contact-form form-style-2 pr-xl-5">
-										<div class="alert alert-success d-none" id="newsletterSuccess">
-											<strong>Sucesso!</strong> Foi adicionado à nossa lista de emails.
+										<div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
+											<strong>Sucesso!</strong> Foi enviado o pedido de subscrição.
 										</div>
-										<div class="alert alert-danger d-none" id="newsletterError"></div>
+										<div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
+											<strong>Erro!</strong> Ocorreu um problema ao tentar enviar o pedido de subscrição.
+											<span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
+										</div>
 
 										<div class="form-row">
 											<div class="form-group col-xl-4">
-												<input type="text" value="" data-msg-required="Por favor introduza o seu nome." maxlength="100" class="form-control" name="newsletterName" id="newsletterName" placeholder="Nome" required>
+												<input type="text" value="" data-msg-required="Por favor introduza o seu nome." maxlength="100" class="form-control" name="name" id="name" placeholder="Nome" required>
 											</div>
 											<div class="form-group col-xl-8">
 												<input type="email" value="" data-msg-required="Por favor introduza o seu email." data-msg-email="Por favor introduza um email válido." maxlength="100" class="form-control" name="email" id="email" placeholder="Email" required>
@@ -927,18 +930,18 @@
 										</div>
 										<div class="form-row">
 											<div class="form-group col">
-												<input type="text" value="" data-msg-required="Por favor introduza a sua empresa." maxlength="100" class="form-control" name="newsletterEmpresa" id="newsletterEmpresa" placeholder="Empresa" required>
+												<input type="text" value="" data-msg-required="Por favor introduza a sua empresa." maxlength="100" class="form-control" name="empresa" id="empresa" placeholder="Empresa" required>
 											</div>
 										</div>
 										<div class="form-row">
 											<div class="form-group col">
-												<input type="text" value="" data-msg-required="Por favor introduza a sua função." maxlength="100" class="form-control" name="newsletterFuncao" id="newsletterFuncao" placeholder="Função" required>
+												<input type="text" value="" data-msg-required="Por favor introduza a sua função." maxlength="100" class="form-control" name="funcao" id="funcao" placeholder="Função" required>
 											</div>
 										</div>
 										<div class="form-row">
 											<div class="form-group col">
 												<input type="email" maxlength="100" class="form-control" name="email2" id="email2">
-												<input type="submit" value="Confirmar" class="btn btn-primary btn-rounded font-weight-semibold px-5 btn-py-2 text-2" data-loading-text="Confirmando...">
+												<input type="submit" value="Confirmar" class="btn btn-primary btn-rounded font-weight-semibold px-5 btn-py-2 text-2" data-loading-text="Enviando...">
 											</div>
 										</div>
 									</form>
