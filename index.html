@@ -911,7 +911,7 @@
 								<div class="px-4">
 									<h2 class="font-weight-bold line-height-1 mb-2">Newsletter</h2>
 									<p class="text-3 mb-4">Mantenha-se atualizado com todas as nossas novidades!</p>
-									<form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST" class="contact-form form-style-2 pr-xl-5">
+									<form id="newsletterForm" action="php/fn.php" method="POST" class="contact-form form-style-2 pr-xl-5">
 										<div class="alert alert-success d-none" id="newsletterSuccess">
 											<strong>Sucesso!</strong> Foi adicionado à nossa lista de emails.
 										</div>
@@ -937,6 +937,7 @@
 										</div>
 										<div class="form-row">
 											<div class="form-group col">
+												<input type="email" maxlength="100" class="form-control" name="email2" id="email2">
 												<input type="submit" value="Confirmar" class="btn btn-primary btn-rounded font-weight-semibold px-5 btn-py-2 text-2" data-loading-text="Confirmando...">
 											</div>
 										</div>
