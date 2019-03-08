@@ -26,43 +26,43 @@ if(!empty($_POST['email2'])){
 
 // Get values from user
 // Using htmlspecialchars to escape input
+foreach($_POST['course_checkbox'] as $value){
+	echo '<script>console.log('.json_encode($value).')</script>';
+	}
 
 foreach($_POST as $label => $value) {
-	$label = ucwords($label);
+$label = ucwords($label);
 
-	if( $label == 'Name' ) {               
-		$label = 'Nome';
-		$fromName = htmlspecialchars($value, ENT_QUOTES);               
-	}
+if( $label == 'Name' ) {               
+	$label = 'Nome';
+	$fromName = htmlspecialchars($value, ENT_QUOTES);               
+}
 
-	if( $label == 'Telefone' ) {               
-		$label = 'Telefone';
-		$telefone = htmlspecialchars($value, ENT_QUOTES);              
-	}
+if( $label == 'Telefone' ) {               
+	$label = 'Telefone';
+	$telefone = htmlspecialchars($value, ENT_QUOTES);              
+}
 
-	if( $label == 'Empresa' ) {               
-		$label = 'Empresa';
-		$empresa = htmlspecialchars($value, ENT_QUOTES);               
-	}
+if( $label == 'Empresa' ) {               
+	$label = 'Empresa';
+	$empresa = htmlspecialchars($value, ENT_QUOTES);               
+}
 
-	if( $label == 'Funcao' ) {               
-		$label = 'Função';
-		$funcao = htmlspecialchars($value, ENT_QUOTES);               
-	}
+if( $label == 'Funcao' ) {               
+	$label = 'Função';
+	$funcao = htmlspecialchars($value, ENT_QUOTES);               
+}
 
-	if( $label == 'Email' ) {               
-		$label = 'Email';
-		$email_m = htmlspecialchars($value, ENT_QUOTES);               
-	}
+if( $label == 'Email' ) {               
+	$label = 'Email';
+	$email_m = htmlspecialchars($value, ENT_QUOTES);               
+}
 
-	// Checkboxes
-	if( is_array($value) ) {
-		// Store new value
-		foreach($value as $j){
-			echo '<script>console.log('.json_encode($j).')</script>';
-		}
-	}
-
+// Checkboxes
+if(  $label == 'course_checkbox' ) {
+	echo '<script>console.log('.json_encode($value).')</script>';
+	
+}
 	//$message .= "<b>" . $label.":</b> " . htmlspecialchars($value, ENT_QUOTES) . "<br>\n";
 }
 /*
