@@ -58,7 +58,7 @@ foreach($_POST as $label => $value) {
 	// Checkboxes
 	if(  is_array($value) ) {
 		// Store new value
-		//$value = implode(', ', $value);
+		$value = implode(', ', $value);
 		echo '<script>console.log('.json_encode($value).')</script>';
 		}
 
