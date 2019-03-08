@@ -17,13 +17,11 @@ require 'php-mailer/src/Exception.php';
 // Destination email address
 $email = 'zemtep@gmail.com';
 
-
 // If honeypot is changed exit
-if(isset($_POST['email2'])){
+if(!empty($_POST['email2'])){
 	// or take other measures.
-	exit();
+	die();
 }
-
 // Get values from user
 // Using htmlspecialchars to escape input
 
